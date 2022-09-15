@@ -44,14 +44,54 @@ function App() {
     });
   }
   return (
-    <div className="App h-screen  bg-[#0d8b65] flex flex-col">
+    <div className="App min-h-screen  bg-[#0d8b65] flex flex-col justify-center items-center">
       <div className="p-4">
         <p className="text-2xl font-semibold text-white">HORSEMEN ENERGY</p>
         <p className="text-white">Calculator</p>
       </div>
 
-      <section className="flex-1 flex ">
-        <div className="p-4 border-r-2 border-r-[#f9f9f920]">
+      <section className="flex-1 flex flex-col space-y-4 ">
+        <div className="text-white mt-8 px-4">
+            <p className="font-semibold text-xl ">
+              Power Consumed in {sessionPerDay} hr :{" "}
+              <span>
+                {parseFloat(sessionPerDay * totalStationCapacity).toFixed(2)} Kw
+              </span>
+            </p>
+            <p className="font-semibold text-xl ">
+              Total Revenue per Day :{" "}
+              <span>
+                {parseFloat(sessionPerDay * totalStationCapacity * 15).toFixed(
+                  2
+                )}{" "}
+                Inr
+              </span>
+            </p>
+          </div>
+        <form className="px-4">
+            <div className="flex items-center space-x-4">
+              <div>
+                <p className="pb-2 text-white">Total Station Capacity</p>
+                <p className="outline-none border-2 bg-white px-4 py-2 rounded-md  border-[#d9d9d959] focus:border-white">
+                  {parseFloat(totalStationCapacity).toFixed(2)}
+                </p>
+              </div>
+              <div>
+                <p className="pb-2 text-white">Session (hr) per day</p>
+                <input
+                  type={"number"}
+                  name="sessionPerDay"
+                  value={sessionPerDay}
+                  onChange={handleFormChange}
+                  min={0}
+                  max={24}
+                  step={1}
+                  className="outline-none border-2 bg-white px-4 py-2 rounded-md  border-[#d9d9d959] focus:border-green-300"
+                />
+              </div>
+            </div>
+          </form>
+        <div className="p-4 ">
           <div className="flex items-end space-x-4">
             <div>
               <p className="pb-2 text-white">Charger Type</p>
@@ -112,41 +152,6 @@ function App() {
                 />
               );
             })}
-          </div>
-        </div>
-        <div className="p-4">
-          <form className="">
-            <div className="flex items-center space-x-4">
-              <div>
-                <p className="pb-2 text-white">Total Station Capacity</p>
-                <p className="outline-none border-2 bg-white px-4 py-2 rounded-md  border-[#d9d9d959] focus:border-white">
-                  {parseFloat(totalStationCapacity).toFixed(2)}
-                </p>
-              </div>
-              <div>
-                <p className="pb-2 text-white">Session (hr) per day</p>
-                <input
-                  type={"number"}
-                  name="sessionPerDay"
-                  value={sessionPerDay}
-                  onChange={handleFormChange}
-                  min={0}
-                  max={24}
-                  step={1}
-                  className="outline-none border-2 bg-white px-4 py-2 rounded-md  border-[#d9d9d959] focus:border-green-300"
-                />
-              </div>
-            </div>
-          </form>
-          <div className="text-white mt-8">
-            <p className="font-semibold text-xl ">
-              Power Consumed in {sessionPerDay} hr :{" "}
-              <span>{parseFloat(sessionPerDay * totalStationCapacity).toFixed(2)} Kw</span>
-            </p>
-            <p className="font-semibold text-xl ">
-              Total Revenue per Day :{" "}
-              <span>{parseFloat(sessionPerDay * totalStationCapacity * 15).toFixed(2)} Inr</span>
-            </p>
           </div>
         </div>
       </section>
