@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/hmecalc/static/css/main.073c9b0a.css",
-    "main.js": "/hmecalc/static/js/main.0ff0ec63.js",
-    "static/js/787.a174f9e5.chunk.js": "/hmecalc/static/js/787.a174f9e5.chunk.js",
-    "static/media/logo.svg": "/hmecalc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/hmecalc/static/css/main.9d2d3c7c.css",
+    "main.js": "/hmecalc/static/js/main.c8720d88.js",
     "index.html": "/hmecalc/index.html",
-    "main.073c9b0a.css.map": "/hmecalc/static/css/main.073c9b0a.css.map",
-    "main.0ff0ec63.js.map": "/hmecalc/static/js/main.0ff0ec63.js.map",
-    "787.a174f9e5.chunk.js.map": "/hmecalc/static/js/787.a174f9e5.chunk.js.map"
+    "main.9d2d3c7c.css.map": "/hmecalc/static/css/main.9d2d3c7c.css.map",
+    "main.c8720d88.js.map": "/hmecalc/static/js/main.c8720d88.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0ff0ec63.js"
+    "static/css/main.9d2d3c7c.css",
+    "static/js/main.c8720d88.js"
   ]
 }
